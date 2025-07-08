@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ad 1 - Gooners Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    .container {display:flex; height:100vh; align-items:center; justify-content:center;flex-direction:column;background:#16213e;color:#fff;font-family:sans-serif;}
+    button {padding:10px 20px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Advertisement #1</h2>
+    <div id="timer">Waiting: 15</div>
+    <button id="next" disabled>Next</button>
+  </div>
+  <script>
+    let t=15, btn=document.getElementById('next'), tm=document.getElementById('timer');
+    let iv=setInterval(()=>{
+      t--; tm.textContent='Waiting: '+t;
+      if(t<=0){ clearInterval(iv); btn.disabled=false; btn.textContent='Next'; }
+    },1000);
+    btn.onclick=()=>location.href='ad2.html';
+  </script>
+</body>
+</html>

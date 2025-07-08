@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {font-family:sans-serif;padding:20px;} h1 {color:#16213e;}
+    form {display:flex;flex-direction:column;width:300px;}
+    input,textarea {margin-bottom:10px;padding:8px;}
+    button {padding:10px;background:#16213e;color:#fff;border:none;cursor:pointer;}
+    button:hover {background:#0f3460;}
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
